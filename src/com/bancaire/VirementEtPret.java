@@ -16,13 +16,17 @@ public class VirementEtPret {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
+		ConnectionToDatabase connection = new ConnectionToDatabase();
+		connection.connect();
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					VirementEtPret window = new VirementEtPret();
 					window.frame.setVisible(true);
-					ConnectionToDatabase connection = new ConnectionToDatabase();
-					connection.connect();
+					//ConnectionToDatabase connection = new ConnectionToDatabase();
+					//connection.connect();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
