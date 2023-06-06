@@ -1,26 +1,30 @@
 package com.bancaire;
 
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Connection;
 
 public class ConnectionToDatabase {
 	
-	private final String url = "jdbc:postgresql://localhost/GestionBancaire";
-	private final String user = "postgres";
-	private final String password = "248651379rfg";
+	public final String url = "jdbc:postgresql://localhost/GestionBancaire";
+	public final String user = "postgres";
+	public final String password = "248651379rfg";
+	
 	
 	public Connection connect() {
-		Connection conn = null;
+		
+		Connection connection = null;
+		
 		
 		try {
-			conn = DriverManager.getConnection(url, user, password);
+			 connection = DriverManager.getConnection(url, user, password);
 			System.out.println("Connexion à la base de données réussie");
 		}catch(SQLException e) {
 			System.out.println(e.getMessage());
 		}
-		return conn;
+		
+		return connection;
+		
 	}
-	
-	
+
 }

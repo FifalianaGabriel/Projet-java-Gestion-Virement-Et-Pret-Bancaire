@@ -1,3 +1,4 @@
+
 package com.bancaire;
 
 import java.awt.EventQueue;
@@ -11,10 +12,14 @@ import com.bancaire.ConnectionToDatabase;
 public class VirementEtPret {
 
 	private JFrame frame;
+	
+
 
 	/**
 	 * Launch the application.
 	 */
+
+
 	public static void main(String[] args) {
 		
 		ConnectionToDatabase connection = new ConnectionToDatabase();
@@ -37,6 +42,11 @@ public class VirementEtPret {
 	/**
 	 * Create the application.
 	 */
+
+
+
+
+
 	public VirementEtPret() {
 		initialize();
 	}
@@ -44,10 +54,13 @@ public class VirementEtPret {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+
+
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 896, 718);
+		frame.setBounds(100, 100, 1165, 718);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 	}
 
 }
